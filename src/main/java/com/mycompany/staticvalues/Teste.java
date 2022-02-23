@@ -15,6 +15,21 @@ public class Teste {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        User us=new User("teste", "teste");
+        System.out.println(us.id);
+        User us2=new User("teste2", "teste2");
+        
+        System.out.println(us2.id);
+        UserStatic uss=new UserStatic("teste3", "test3");
+         System.out.println("affichage static1 id="+UserStatic.id);
+         
+         UserStatic uss2=new UserStatic();
+         System.out.println("affichage static2 id="+UserStatic.id);
+         UserStatic.id++;
+         System.out.println("Appel directe id= "+UserStatic.id);
+
+
+        
     }
     
 }

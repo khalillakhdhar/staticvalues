@@ -8,17 +8,16 @@ package com.mycompany.staticvalues;
  *
  * @author khali
  */
-public class User {
-    int id; 
-    String nom;
-    String prenom;
+public class UserStatic {
+    static int id=0;
+    String nom,prenom;
 
-    public int getId() {
+    public static int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public static void setId(int id) {
+        UserStatic.id = id;
     }
 
     public String getNom() {
@@ -37,21 +36,18 @@ public class User {
         this.prenom = prenom;
     }
 
-    public User() {
+    public UserStatic() {
+        //this.id; incorrecte
+        id++;
     }
 
-    public User(String nom, String prenom) {
+    public UserStatic(String nom, String prenom) {
         this.nom = nom;
         this.prenom = prenom;
-        this.id++;
+        id++;
     }
-
-    public User(int id, String nom, String prenom) {
-        this.id = id;
-        this.nom = nom;
-        this.prenom = prenom;
-        
-    }
+    
+    
     
     
     
